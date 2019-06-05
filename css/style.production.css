@@ -1,0 +1,245 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #E6E6FA;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+}
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff; /*placeholder white for now, will change later*/
+}
+.pageheader__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+}
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+a {
+  color: #357b70;
+}
+a:visited {
+  color: #15312C;
+}
+a:hover {
+  color: #AECAC5;
+}
+a:focus {
+  color: #AECAC5;
+}
+a:active {
+  color: #e0b354;
+}
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.about-me {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.experience-table {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #357b70;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #357b70;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+button:hover, button:focus, .button:hover, .button:focus {
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.grid__item {
+  background-color: lightgray;
+  padding: 15px;
+}
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@-webkit-keyframes mookiespin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes mookiespin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.mookieturn {
+  -webkit-animation-name: mookiespin;
+          animation-name: mookiespin;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes lunaspin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes lunaspin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+.lunaturn {
+  -webkit-animation-name: lunaspin;
+          animation-name: lunaspin;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}

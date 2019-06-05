@@ -1,0 +1,181 @@
+:root {
+  --primary-color: #357b70;
+  --primary-darker: #15312C;
+  --primary-lighter: #AECAC5;
+  --secondary-color: #e0b354;
+  --header-bg: #fff;
+  --background: #E6E6FA;
+  --body-font: #000;
+  --button-font: #fff;
+  --font-size: 16px;
+  --font-weight: 400;
+  --h1-font-size: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Poppins', sans-serif;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 1.2;
+  color: var(--body-font);
+}
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--header-bg); /*placeholder white for now, will change later*/
+}
+.pageheader__item {
+  flex: 0 1 200px;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+a {
+  color: var(--primary-color);
+}
+a:visited {
+  color: var(--primary-darker);
+}
+a:hover, a:focus {
+  color: var(--primary-lighter);
+}
+a:active {
+  color: var(--secondary-color);
+}
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.about-me {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.experience-table {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.button, button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--primary-color);
+  color: var(--button-font);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+  align-self: center;
+}
+button:hover, button:focus, .button:hover, .button:focus {
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.grid__item {
+  background-color: lightgray;
+  padding: 15px;
+}
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+  h1 {
+    font-size: var(--h1-font-size);
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: var(--h1-font-size);
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: var(--h1-font-size);
+  }
+}
+
+@keyframes mookiespin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.mookieturn {
+  animation-name: mookiespin;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes lunaspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.lunaturn {
+  animation-name: lunaspin;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
