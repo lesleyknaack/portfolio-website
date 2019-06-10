@@ -3,10 +3,10 @@
   --primary-darker: #15312C;
   --primary-lighter: #AECAC5;
   --secondary-color: #e0b354;
-  --header-bg: #fff;
-  --background: #E6E6FA;
-  --body-font: #000;
-  --button-font: #fff;
+  --header-bg-color: #fff;
+  --background-color: #E6E6FA;
+  --body-font-color: #000;
+  --button-font-color: #fff;
   --font-size: 16px;
   --font-weight: 400;
   --h1-font-size: 22px;
@@ -17,18 +17,18 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--background-color);
   font-family: 'Poppins', sans-serif;
   font-weight: var(--font-weight);
   font-size: var(--font-size);
   line-height: 1.2;
-  color: var(--body-font);
+  color: var(--body-font-color);
 }
 .page-header {
   display: flex;
   width: 100%;
   padding: 20px;
-  background-color: var(--header-bg); /*placeholder white for now, will change later*/
+  background-color: var(--header-bg-color); /*placeholder white for now, will change later*/
 }
 .pageheader__item {
   flex: 0 1 200px;
@@ -83,7 +83,7 @@ a:active {
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--primary-color);
-  color: var(--button-font);
+  color: var(--button-font-color);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
